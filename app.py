@@ -23,129 +23,227 @@ html, body, [class*="css"] {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Título principal */
+/* =========================
+   TÍTULO PRINCIPAL
+========================= */
+
 .main-title {
     text-align: center;
-    font-size: 42px;
-    font-weight: bold;
+    font-size: 58px;
+    font-weight: 800;
     color: #00ffe1;
-    margin-bottom: 8px;
-    text-shadow: 0px 0px 15px #00ffe1;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 18px #00ffe1;
+    letter-spacing: 1px;
 }
 
-/* Subtítulo */
+/* =========================
+   SUBTÍTULO
+========================= */
+
 .subtitle {
     text-align: center;
-    font-size: 18px;
-    color: #bdbdbd;
-    margin-bottom: 30px;
+    font-size: 27px;
+    font-weight: 600;
+    color: #d0d0d0;
+    margin-bottom: 35px;
 }
 
-/* Caja de preguntas MÁS COMPACTA */
+/* =========================
+   CAJAS DE PREGUNTAS
+========================= */
+
 .question-box {
     background: #1a1d29;
-    padding: 12px 18px;
-    border-radius: 14px;
-    margin-bottom: 10px;
+    padding: 14px 20px;
+    border-radius: 16px;
+    margin-bottom: 12px;
     border: 1px solid #2f3547;
-    box-shadow: 0px 0px 10px rgba(0,255,225,0.08);
+    box-shadow: 0px 0px 12px rgba(0,255,225,0.08);
+    transition: 0.3s;
 }
 
-/* Preguntas MÁS GRANDES */
+.question-box:hover {
+    border: 1px solid #00ffe1;
+    box-shadow: 0px 0px 18px rgba(0,255,225,0.2);
+}
+
+/* =========================
+   TEXTO DE PREGUNTAS
+========================= */
+
 .question-box label,
 .question-box p,
 .stRadio label,
 .stSelectSlider label {
-    font-size: 18px !important;
+
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    color: white !important;
+    line-height: 1.4;
+}
+
+/* =========================
+   OPCIONES SÍ / NO
+========================= */
+
+.stRadio div[role="radiogroup"] {
+    gap: 25px;
+}
+
+.stRadio div[role="radiogroup"] label {
+    font-size: 20px !important;
     font-weight: 600 !important;
-    color: #ffffff !important;
+    background: #252938;
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid #3b4255;
+    transition: 0.3s;
 }
 
-/* Radios Sí / No */
-.stRadio > div {
-    gap: 20px;
+.stRadio div[role="radiogroup"] label:hover {
+    border: 1px solid #00ffe1;
+    box-shadow: 0px 0px 10px rgba(0,255,225,0.25);
 }
 
-/* Resultado */
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
+.stButton>button {
+    width: 100%;
+    background: linear-gradient(90deg, #00ffe1, #007cf0);
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 14px;
+    border: none;
+    padding: 14px;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.stButton>button:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 25px #00ffe1;
+}
+
+/* =========================
+   RESULTADO
+========================= */
+
 .result-box {
     background: linear-gradient(135deg, #00c6ff, #0072ff);
-    padding: 28px;
-    border-radius: 20px;
+    padding: 32px;
+    border-radius: 22px;
     text-align: center;
     animation: aparecer 0.8s ease-in-out;
-    margin-top: 25px;
-    box-shadow: 0px 0px 30px rgba(0,255,225,0.4);
+    margin-top: 28px;
+    box-shadow: 0px 0px 35px rgba(0,255,225,0.4);
 }
 
 .result-text {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
     color: white;
+    line-height: 1.5;
 }
 
-/* Animación */
+/* =========================
+   ANIMACIÓN
+========================= */
+
 @keyframes aparecer {
+
     from {
         opacity: 0;
         transform: translateY(30px) scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: translateY(0px) scale(1);
     }
 }
 
-/* Botón principal */
-.stButton>button {
-    width: 100%;
-    background: linear-gradient(90deg, #00ffe1, #007cf0);
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 12px;
-    border: none;
-    padding: 12px;
-    transition: 0.3s;
-    margin-top: 10px;
-}
+/* =========================
+   CAJA GOOGLE COLAB
+========================= */
 
-.stButton>button:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 0px 20px #00ffe1;
-}
-
-/* Footer */
-.footer {
-    margin-top: 55px;
-    text-align: center;
-    color: #777;
-    font-size: 14px;
-}
-
-/* Caja COLAB estilo tecnológico */
 .colab-box {
     background: linear-gradient(135deg, #111827, #1f2937);
     border: 1px solid #00ffe1;
-    padding: 18px;
-    border-radius: 18px;
+    padding: 24px;
+    border-radius: 20px;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 35px;
     box-shadow: 0px 0px 20px rgba(0,255,225,0.15);
     animation: aparecer 1s ease-in-out;
+    transition: 0.3s;
 }
 
-/* Link Colab */
+.colab-box:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 25px rgba(0,255,225,0.25);
+}
+
+/* =========================
+   EMOJI DEL CUADERNO
+========================= */
+
+.colab-emoji {
+    font-size: 68px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* =========================
+   LINK COLAB
+========================= */
+
 .colab-box a {
     color: #00ffe1;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-/* Hover link */
 .colab-box a:hover {
     color: white;
-    text-shadow: 0px 0px 10px #00ffe1;
+    text-shadow: 0px 0px 12px #00ffe1;
+}
+
+/* =========================
+   FOOTER / CRÉDITOS
+========================= */
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =========================
+   SCROLLBAR MODERNO
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ffe1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00c6ff;
 }
 
 </style>
