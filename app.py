@@ -29,7 +29,7 @@ html, body, [class*="css"] {
     font-size: 42px;
     font-weight: bold;
     color: #00ffe1;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-shadow: 0px 0px 15px #00ffe1;
 }
 
@@ -38,43 +38,60 @@ html, body, [class*="css"] {
     text-align: center;
     font-size: 18px;
     color: #bdbdbd;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-/* Caja de preguntas */
+/* Caja de preguntas MÁS COMPACTA */
 .question-box {
     background: #1a1d29;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    margin-bottom: 10px;
     border: 1px solid #2f3547;
-    box-shadow: 0px 0px 10px rgba(0,255,225,0.1);
+    box-shadow: 0px 0px 10px rgba(0,255,225,0.08);
+}
+
+/* Preguntas MÁS GRANDES */
+.question-box label,
+.question-box p,
+.stRadio label,
+.stSelectSlider label {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+}
+
+/* Radios Sí / No */
+.stRadio > div {
+    gap: 20px;
 }
 
 /* Resultado */
 .result-box {
     background: linear-gradient(135deg, #00c6ff, #0072ff);
-    padding: 30px;
+    padding: 28px;
     border-radius: 20px;
     text-align: center;
-    animation: aparecer 1s ease-in-out;
-    margin-top: 30px;
+    animation: aparecer 0.8s ease-in-out;
+    margin-top: 25px;
+    box-shadow: 0px 0px 30px rgba(0,255,225,0.4);
 }
 
 .result-text {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
 }
 
+/* Animación */
 @keyframes aparecer {
     from {
         opacity: 0;
-        transform: scale(0.7);
+        transform: translateY(30px) scale(0.9);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0px) scale(1);
     }
 }
 
@@ -89,43 +106,53 @@ html, body, [class*="css"] {
     border: none;
     padding: 12px;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 .stButton>button:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     box-shadow: 0px 0px 20px #00ffe1;
 }
 
-/* Créditos */
+/* Footer */
 .footer {
-    margin-top: 60px;
+    margin-top: 55px;
     text-align: center;
-    color: gray;
+    color: #777;
     font-size: 14px;
 }
 
-/* Caja del colab */
+/* Caja COLAB estilo tecnológico */
 .colab-box {
-    background: linear-gradient(135deg, #ff9800, #ff5722);
-    padding: 20px;
+    background: linear-gradient(135deg, #111827, #1f2937);
+    border: 1px solid #00ffe1;
+    padding: 18px;
     border-radius: 18px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
+    box-shadow: 0px 0px 20px rgba(0,255,225,0.15);
     animation: aparecer 1s ease-in-out;
 }
 
+/* Link Colab */
 .colab-box a {
-    color: white;
+    color: #00ffe1;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+}
+
+/* Hover link */
+.colab-box a:hover {
+    color: white;
+    text-shadow: 0px 0px 10px #00ffe1;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 # TÍTULO
-st.markdown('<div class="main-title">💻 OS RECOMMENDER AI</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">💻 Recomendador de OS</div>', unsafe_allow_html=True)
 
 st.markdown(
     '<div class="subtitle">Sistema Inteligente de Recomendación de Sistemas Operativos</div>',
@@ -212,10 +239,10 @@ if st.button("🚀 Analizar y Recomendar"):
     prediccion = modelo.predict(datos)
 
     sistemas = {
-        0:"🟢 Kali Linux",
-        1:"🟢 Linux Mint",
-        2:"🟢 Ubuntu",
-        3:"🟢 Windows"
+        0:"👾 Kali Linux",
+        1:"👾 Linux Mint",
+        2:"👾 Ubuntu",
+        3:"👾 Windows"
     }
 
     resultado = sistemas[prediccion[0]]
