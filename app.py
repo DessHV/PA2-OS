@@ -18,9 +18,39 @@ st.markdown("""
 <style>
 
 html, body, [class*="css"] {
-    background-color: #0f1117;
+
+    background: linear-gradient(
+        -45deg,
+        #0f1117,
+        #111827,
+        #0a192f,
+        #121826
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientBG 15s ease infinite;
+
     color: white;
+
     font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animación del fondo */
+
+@keyframes gradientBG {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* =========================
