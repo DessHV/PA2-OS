@@ -19,21 +19,52 @@ st.markdown("""
 
 html, body, [class*="css"] {
 
-    background: linear-gradient(
-        -45deg,
-        #0f1117,
-        #111827,
-        #0a192f,
-        #121826
-    );
+    background-color: #0b0f1a;
 
-    background-size: 400% 400%;
+    background-image:
 
-    animation: gradientBG 15s ease infinite;
+    /* GRID CYBERPUNK */
+
+    linear-gradient(rgba(0,255,225,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,225,0.07) 1px, transparent 1px),
+
+    /* GLOW RADIAL */
+
+    radial-gradient(circle at top left, rgba(0,255,225,0.12), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(0,123,255,0.10), transparent 35%);
+
+    background-size:
+        45px 45px,
+        45px 45px,
+        100% 100%,
+        100% 100%;
+
+    animation: cyberMove 12s linear infinite;
 
     color: white;
 
     font-family: 'Segoe UI', sans-serif;
+}
+
+/* ANIMACIÓN DEL GRID */
+
+@keyframes cyberMove {
+
+    0% {
+        background-position:
+            0px 0px,
+            0px 0px,
+            0% 0%,
+            100% 100%;
+    }
+
+    100% {
+        background-position:
+            45px 45px,
+            45px 45px,
+            0% 0%,
+            100% 100%;
+    }
 }
 
 /* Animación del fondo */
