@@ -77,10 +77,10 @@ html, body, [class*="css"] {
 .stRadio label,
 .stSelectSlider label {
 
-    font-size: 23px !important;
-    font-weight: 700 !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
     color: white !important;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* =========================
@@ -92,8 +92,8 @@ html, body, [class*="css"] {
 }
 
 .stRadio div[role="radiogroup"] label {
-    font-size: 20px !important;
-    font-weight: 600 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
     background: #252938;
     padding: 10px 18px;
     border-radius: 12px;
